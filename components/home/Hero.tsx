@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
         <p className="font-outfit text-copper uppercase tracking-[0.3em] text-sm mb-6 animate-slide-up">
-          Premium Grooming Collection
+          Premium Barber Services & Grooming Products
         </p>
         <h1
           className="font-bebas text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight"
@@ -27,7 +27,8 @@ const Hero = () => {
           className="font-outfit text-xl md:text-2xl text-foreground/90 max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ animationDelay: "0.4s" }}
         >
-          Elevate your grooming routine with professionally crafted products.
+          Experience the art of traditional barbering and elevate your daily
+          routine with our professionally crafted products.
           <span className="text-gradient block mt-2">
             Trained in England. Perfected Locally.
           </span>
@@ -40,7 +41,7 @@ const Hero = () => {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-outfit font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105"
           >
-            Shop Collection
+            Book Appointment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button
@@ -48,7 +49,7 @@ const Hero = () => {
             variant="outline"
             className="border-2 border-primary text-foreground hover:bg-primary/10 font-outfit font-semibold px-8 py-6 text-lg"
           >
-            Learn More
+            Shop Products
           </Button>
         </div>
       </div>
