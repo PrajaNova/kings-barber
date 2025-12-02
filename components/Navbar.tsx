@@ -1,77 +1,69 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
+import { ShoppingCart, Menu, Search } from "lucide-react";
+import Button from "##/components/ui/Button";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { Button } from "./Button";
+import Link from "next/link";
+import Image from "next/image";
 
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Products", href: "/products" },
-  { name: "Contact", href: "/contact" },
-];
-
-export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+export const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10">
-      <div className="container mx-auto px-4 md:px-6">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="text-2xl font-serif font-bold text-secondary"
-          >
-            King's Barber
-          </Link>
+          <div className="flex items-center">
+            <Link href="/">
+              <Image src={"https://kingsbarber.com.sg/wp-content/uploads/2016/08/LOGO.png"} height={200} width={200} alt="Logo"/>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-accent/80 hover:text-secondary transition-colors text-sm uppercase tracking-wider"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button size="sm">Book Now</Button>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="font-outfit text-foreground hover:text-primary transition-colors">Home</Link>
+            <Link href="/products" className="font-outfit text-foreground hover:text-primary transition-colors">Products</Link>
+            <Link href="#about" className="font-outfit text-foreground hover:text-primary transition-colors">About</Link>
+            <Link href="#services" className="font-outfit text-foreground hover:text-primary transition-colors">Services</Link>
+            <Link href="#contact" className="font-outfit text-foreground hover:text-primary transition-colors">Contact</Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            className="md:hidden text-accent hover:text-secondary"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Right Icons */}
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
+              <Search className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" className="text-foreground hover:text-primary relative">
+              <ShoppingCart className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                0
+              </span>
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="md:hidden text-foreground"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+            <div className="flex flex-col space-y-4">
+              <Link href="/" className="font-outfit text-foreground hover:text-primary transition-colors">Home</Link>
+              <Link href="/products" className="font-outfit text-foreground hover:text-primary transition-colors">Products</Link>
+              <Link href="#about" className="font-outfit text-foreground hover:text-primary transition-colors">About</Link>
+              <Link href="#services" className="font-outfit text-foreground hover:text-primary transition-colors">Services</Link>
+              <Link href="#contact" className="font-outfit text-foreground hover:text-primary transition-colors">Contact</Link>
+            </div>
+          </div>
+        )}
       </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-primary border-t border-white/10 absolute w-full">
-          <div className="flex flex-col p-4 gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-accent/80 hover:text-secondary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button className="w-full">Book Now</Button>
-          </div>
-        </div>
-      )}
     </nav>
   );
-}
+};
