@@ -1,5 +1,7 @@
+import Hero from "##/components/home/Hero"
+
 const Page = ()=>{
-    return (<div>Home Page</div>)
+    return (<Hero/>)
 }
 
 export default Page
