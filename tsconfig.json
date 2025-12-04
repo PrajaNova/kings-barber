@@ -22,7 +22,8 @@
       "##/components/*": ["./components/*"],
       "##/lib/*": ["./lib/*"],
       "##/app/*": ["./app/*"],
-      "##/public/*": ["./public/*"] 
+      "##/public/*": ["./public/*"],
+      "##/hooks/*": ["./hooks/*"]
     }
   },
   "include": [

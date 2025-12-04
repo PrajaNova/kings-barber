@@ -1,34 +1,4 @@
-import type { Metadata } from "next";
-import { Inter, Playfair_Display, Bebas_Neue, Outfit } from "next/font/google";
 import "./main.css";
-import { Navbar } from "##/components/Navbar";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-const bebas = Bebas_Neue({
-  variable: "--font-bebas",
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "King's Barber - Premium Grooming Services",
-  description:
-    "Experience the finest cuts and shaves at King's Barber. Classic style, modern service.",
-};
 
 export default function RootLayout({
   children,
@@ -37,12 +7,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={'min-h-screen bg-background'}
-      >
-        <Navbar />
-        {children}
-      </body>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1"
+        />
+        <title>
+          Kings Barber - Premium Barbershop in Singapore | UK-Trained Barbers
+        </title>
+        <meta
+          name="description"
+          content="Kings Barber Singapore - Trained in England, perfected locally. Premium haircuts, traditional wet shaves, scalp treatments, and men's grooming products. Certified by Sid Sottung Academy (UK). Visit us at Shaw Corner."
+        />
+        <meta
+          property="og:title"
+          content="Kings Barber - Premium Barbershop in Singapore"
+        />
+        <meta
+          property="og:description"
+          content="UK-trained barbers offering premium haircuts, traditional wet shaves, and men's grooming services since 2015."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
