@@ -2,6 +2,7 @@ import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import "@radix-ui/themes/styles.css";
 import "./main.css";
+import { Navbar } from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: "King's Barber - Premium Grooming Services",
@@ -22,8 +23,10 @@ export default function RootLayout({
           grayColor="sand"
           radius="medium"
           scaling="100%"
+          appearance="dark"
         >
-          {children}
+          <Navbar />
+          <main style={{ paddingTop: "72px" }}>{children}</main>
         </Theme>
       </body>
     </html>
