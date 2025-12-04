@@ -1,28 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Bebas_Neue, Outfit } from "next/font/google";
 import "./main.css";
-import { Navbar } from "##/components/Navbar";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-const bebas = Bebas_Neue({
-  variable: "--font-bebas",
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "King's Barber - Premium Grooming Services",
@@ -37,12 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={'min-h-screen bg-background'}
-      >
-        <Navbar />
-        {children}
-      </body>
+      <body className={"min-h-screen bg-background"}>{children}</body>
     </html>
   );
 }
