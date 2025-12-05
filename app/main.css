@@ -1,140 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ============================================
+   Kings Barber - Custom Overrides for Radix Themes
+   ============================================ */
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
-@layer base {
-  :root {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 25 55% 60%;
-    --primary-foreground: 0 0% 10%;
-
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 350 60% 40%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 18%;
-    --ring: 25 55% 60%;
-
-    --radius: 0.5rem;
-    
-    --copper: 25 55% 60%;
-    --copper-dark: 25 45% 45%;
-    --burgundy: 350 60% 40%;
-    --charcoal: 0 0% 15%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--charcoal)) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(var(--copper)) 0%, hsl(var(--burgundy)) 100%);
-    --shadow-glow: 0 0 40px hsla(var(--copper) / 0.2);
-    --shadow-card: 0 10px 30px -10px hsla(0 0% 0% / 0.5);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
-  }
+/* Theme-aware glass morphism colors */
+:root,
+.light,
+.light-theme {
+  --color-overlay: rgba(0, 0, 0, 0.05);
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-[hsl(var(--copper))] to-[hsl(var(--burgundy))] bg-clip-text text-transparent;
-  }
-  
-  .hover-lift {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)];
-  }
-  
-  .card-glow {
-    box-shadow: var(--shadow-card);
-  }
+.dark,
+.dark-theme {
+  --color-overlay: rgba(255, 255, 255, 0.08);
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
+/* Base font */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Serif font for headings (optional - use class="font-serif") */
+.font-serif {
+  font-family: "Playfair Display", Georgia, serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Radix Theme Overrides */
+.radix-themes {
+  --container-4: 1680px; /* Overriding default container size 4 */
 }

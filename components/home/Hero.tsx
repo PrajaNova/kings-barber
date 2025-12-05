@@ -1,62 +1,107 @@
-import { ArrowRight } from "lucide-react";
-import Button from "##/components/ui/Button";
+"use client";
 
-const Hero = () => {
+import { Badge, Button, Flex, Text } from "@radix-ui/themes";
+import { ArrowRight, Award } from "lucide-react";
+import {
+  ButtonGroup,
+  HeroContent,
+  HeroHeading,
+  HeroSection,
+  MainHeading,
+  MouseIcon,
+  ScrollDot,
+  ScrollIndicator,
+} from "./Hero.styled";
+import { HeroBackground } from "./HeroBackground";
+import { BusinessInfo } from "./HeroData";
+
+export const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(/assets/images/hero.jpg)`,
-        }}
-      />
+    <HeroSection>
+      <HeroBackground />
+      <HeroContent>
+        <Flex
+          direction="column"
+          align="start"
+          gap="4"
+          style={{ width: "fit-content" }}
+        >
+          <Badge
+            variant="surface"
+            color="amber"
+            size="3"
+            style={{
+              background: "rgba(255, 179, 0, 0.1)",
+              color: "white",
+              border: "1px solid rgba(255, 179, 0, 0.3)",
+              backdropFilter: "blur(4px)",
+              padding: "6px 16px",
+            }}
+          >
+            <Award size={14} style={{ marginRight: "6px" }} />
+            Certified by {BusinessInfo.certification}
+          </Badge>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-        <p className="font-outfit text-copper uppercase tracking-[0.3em] text-sm mb-6 animate-slide-up">
-          Premium Grooming Collection
-        </p>
-        <h1
-          className="font-bebas text-6xl md:text-8xl lg:text-9xl text-foreground mb-6 leading-tight"
-          style={{ animationDelay: "0.2s" }}
-        >
-          KINGS BARBER
-        </h1>
-        <p
-          className="font-outfit text-xl md:text-2xl text-foreground/90 max-w-2xl mx-auto mb-10 leading-relaxed"
-          style={{ animationDelay: "0.4s" }}
-        >
-          Elevate your grooming routine with professionally crafted products.
-          <span className="text-gradient block mt-2">
-            Trained in England. Perfected Locally.
-          </span>
-        </p>
-        <div
-          className="flex gap-4 justify-center flex-wrap"
-          style={{ animationDelay: "0.6s" }}
-        >
+          <Text
+            size="4"
+            style={{
+              color: "rgba(255, 255, 255, 0.8)",
+              fontFamily: "'Outfit', sans-serif",
+              letterSpacing: "0.05em",
+              textAlign: "left",
+            }}
+          >
+            Premium barbering services since {BusinessInfo.established}.
+          </Text>
+
+          <MainHeading as="h1" style={{ margin: "16px 0", textAlign: "left" }}>
+            KINGS BARBER
+          </MainHeading>
+        </Flex>
+
+        <HeroHeading as="h2">
+          {BusinessInfo.tagline.split(",")[0]},
+          <span>{BusinessInfo.tagline.split(",")[1]}</span>
+        </HeroHeading>
+
+        <ButtonGroup>
           <Button
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-outfit font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105"
+            size="4"
+            variant="outline"
+            color="amber"
+            style={{
+              cursor: "pointer",
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 600,
+              padding: "24px 32px",
+            }}
           >
             Shop Collection
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight width={20} height={20} />
           </Button>
           <Button
-            size="lg"
+            size="4"
             variant="outline"
-            className="border-2 border-primary text-foreground hover:bg-primary/10 font-outfit font-semibold px-8 py-6 text-lg"
+            color="amber"
+            style={{
+              cursor: "pointer",
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 600,
+              padding: "24px 32px",
+            }}
           >
-            Learn More
+            View Services
+            <ArrowRight width={20} height={20} />
           </Button>
-        </div>
-      </div>
+        </ButtonGroup>
+      </HeroContent>
 
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
+      <ScrollIndicator>
+        <span>Scroll to explore</span>
+        <MouseIcon>
+          <ScrollDot />
+        </MouseIcon>
+      </ScrollIndicator>
+    </HeroSection>
   );
 };
-
-export default Hero;

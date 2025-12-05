@@ -1,7 +1,10 @@
-import Hero from "##/components/home/Hero"
+import { Box } from "@radix-ui/themes";
+import { Hero } from "##/components/home/Hero";
 
-const Page = ()=>{
-    return (<Hero/>)
+export default function Page() {
+  return (
+    <Box>
+      <Hero />
+    </Box>
+  );
 }
-
-export default Page
