@@ -5,6 +5,18 @@
 /* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
+/* Theme-aware glass morphism colors */
+:root,
+.light,
+.light-theme {
+  --color-overlay: rgba(0, 0, 0, 0.05);
+}
+
+.dark,
+.dark-theme {
+  --color-overlay: rgba(255, 255, 255, 0.08);
+}
+
 /* Base font */
 body {
   font-family: "Inter", system-ui, sans-serif;
@@ -20,4 +32,9 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Radix Theme Overrides */
+.radix-themes {
+  --container-4: 1680px; /* Overriding default container size 4 */
 }

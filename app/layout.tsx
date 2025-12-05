@@ -1,8 +1,8 @@
-import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import "@radix-ui/themes/styles.css";
 import "./main.css";
-import { Navbar } from "../components/Navbar";
+import { ThemeProvider } from "##/components/providers/ThemeProvider";
+import { Navbar } from "##/components/ui/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "King's Barber - Premium Grooming Services",
@@ -18,16 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme
-          accentColor="amber"
-          grayColor="sand"
-          radius="medium"
-          scaling="100%"
-          appearance="dark"
-        >
+        <ThemeProvider>
           <Navbar />
           <main style={{ paddingTop: "72px" }}>{children}</main>
-        </Theme>
+        </ThemeProvider>
       </body>
     </html>
   );
