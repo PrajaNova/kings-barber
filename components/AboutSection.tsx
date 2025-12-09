@@ -11,7 +11,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="w-full bg-black ">
+    <section className="w-full bg-black py-5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
           {/* Left Side - Image */}

@@ -114,3 +114,66 @@ export const SERVICES_CONTENT = {
     href: "/services",
   },
 } as const;
+
+export const PRODUCTS_CONTENT = {
+  header: {
+    title: "Premium Grooming Products",
+    tagline: "Trusted by professionals, now available for you.",
+  },
+  featured: [
+    {
+      id: 1,
+      name: "Lock Stock & Barrel Puck",
+      price: "$35.00",
+      description: "Original classic wax for strong hold and shine.",
+      image: "/assets/images/hero.jpg", // Placeholder
+      href: "/products/lsb-puck",
+    },
+    {
+      id: 2,
+      name: "Fauvert Scalp Tonic",
+      price: "$45.00",
+      description: "Revitalizing tonic for healthy scalp and growth.",
+      image: "/assets/images/hero.jpg", // Placeholder
+      href: "/products/fauvert-tonic",
+    },
+    {
+      id: 3,
+      name: "Beard Grooming Kit",
+      price: "$55.00",
+      description: "Complete set with oil, balm, and comb.",
+      image: "/assets/images/hero.jpg", // Placeholder
+      href: "/products/beard-kit",
+    },
+  ],
+  carousel: [
+    {
+      id: 4,
+      name: "Daily Shampoo",
+      image: "/assets/images/hero.jpg",
+      href: "/products/shampoo",
+    },
+    {
+      id: 5,
+      name: "Texture Powder",
+      image: "/assets/images/hero.jpg",
+      href: "/products/powder",
+    },
+    {
+      id: 6,
+      name: "Shaving Cream",
+      image: "/assets/images/hero.jpg",
+      href: "/products/cream",
+    },
+    {
+      id: 7,
+      name: "Aftershave Balm",
+      image: "/assets/images/hero.jpg",
+      href: "/products/balm",
+    },
+  ],
+  cta: {
+    text: "Explore All Products",
+    href: "/store",
+  },
+} as const;

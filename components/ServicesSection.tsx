@@ -5,7 +5,7 @@ import { SERVICES_CONTENT } from "##/lib/constants";
 
 export default function ServicesSection() {
   return (
-    <section className="bg-black py-20 lg:py-32">
+    <section className="bg-black py-5">
       <div className="container mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -59,10 +59,10 @@ export default function ServicesSection() {
         </div>
 
         {/* Action Button */}
-        <div className="mt-16 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <Link
             href={SERVICES_CONTENT.cta.href}
-            className="group inline-flex items-center gap-2 rounded-full bg-amber-500 px-8 py-4 text-base font-semibold text-black transition-all duration-300 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/25 active:scale-95"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-transparent px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:border-amber-500 hover:bg-amber-500 hover:text-black hover:shadow-lg hover:shadow-amber-500/25 active:scale-95"
           >
             {SERVICES_CONTENT.cta.text}
             <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

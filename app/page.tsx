@@ -2,6 +2,7 @@ import AboutSection from "##/components/AboutSection";
 import AwardsCarousel from "##/components/AwardsCarousel";
 import Hero from "##/components/Hero";
 import Navbar from "##/components/Navbar";
+import ProductsSection from "##/components/ProductsSection";
 import ServicesSection from "##/components/ServicesSection";
 
 export default function Home() {
@@ -10,8 +11,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutSection />
-      <AwardsCarousel />
       <ServicesSection />
+      <ProductsSection />
+      <AwardsCarousel />
     </main>
   );
 }

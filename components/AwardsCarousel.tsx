@@ -9,7 +9,7 @@ export default function AwardsCarousel() {
   const seamlessAwards = [...AWARDS_CONTENT, ...AWARDS_CONTENT];
 
   return (
-    <section className="w-full overflow-hidden bg-black py-10 border-t border-white/5">
+    <section className="w-full overflow-hidden bg-black border-t border-white/5 py-5">
       <div className="relative w-full">
         {/* Gradients for creating fading effect at edges */}
         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-linear-to-r from-black via-black/80 to-transparent" />
