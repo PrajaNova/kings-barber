@@ -1,27 +1,29 @@
 import type { Metadata } from "next";
-import "@radix-ui/themes/styles.css";
-import "./main.css";
-import { ThemeProvider } from "##/components/providers/ThemeProvider";
-import { Navbar } from "##/components/ui/Navbar/Navbar";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "King's Barber - Premium Grooming Services",
-  description:
-    "Experience the finest cuts and shaves at King's Barber. Classic style, modern service.",
+  title: "Kings Barber",
+  description: "Premium Barber Services",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-        </ThemeProvider>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.className,
+        )}
+      >
+        {children}
       </body>
     </html>
   );

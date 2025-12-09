@@ -10,20 +10,25 @@
     "format": "biome format --write ."
   },
   "dependencies": {
-    "@radix-ui/themes": "^3.2.1",
-    "@stitches/react": "^1.2.8",
+    "class-variance-authority": "^0.7.1",
     "clsx": "2.1.1",
     "lucide-react": "0.555.0",
     "next": "14.2.13",
-    "radix-ui": "^1.4.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20.12.7",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "shadcn": "^3.5.1",
+    "tailwindcss": "^4.1.17",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"
