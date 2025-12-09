@@ -1,6 +1,11 @@
-import { Award } from "lucide-react";
+import { Award, MessageCircle, Phone } from "lucide-react";
 import Image from "next/image";
-import { HERO_CONTENT } from "##/lib/constants";
+import Link from "next/link";
+import {
+  CONTACT_PHONE_NUMBER,
+  CONTACT_WHATSAPP_NUMBER,
+  HERO_CONTENT,
+} from "##/lib/constants";
 
 export default function Hero() {
   return (
@@ -42,6 +47,31 @@ export default function Hero() {
           <p className="max-w-2xl text-lg leading-relaxed text-gray-300 md:text-md lg:text-xl">
             {HERO_CONTENT.tagline}
           </p>
+
+          {/* CTA Section */}
+          <div className="pt-8 space-y-4">
+            <p className="text-xl font-medium text-amber-500">
+              {HERO_CONTENT.cta.text}
+            </p>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1.5 backdrop-blur-md">
+                <Link
+                  href={`tel:${CONTACT_PHONE_NUMBER}`}
+                  className="rounded-full px-3 py-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                  aria-label="Call Us"
+                >
+                  <Phone className="h-6 w-6" />
+                </Link>
+                <Link
+                  href={`https://wa.me/${CONTACT_WHATSAPP_NUMBER.replace("+", "")}`}
+                  className="rounded-full px-3 py-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                  aria-label="WhatsApp Us"
+                >
+                  <MessageCircle className="h-6 w-6" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
