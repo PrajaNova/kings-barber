@@ -47,7 +47,7 @@ export default function AboutSection() {
 
                 return (
                   <div key={item.title} className="flex flex-col space-y-3">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 text-amber-400 backdrop-blur-sm">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-400 backdrop-blur-sm">
                       <IconComponent className="h-6 w-6" />
                     </div>
                     <h3 className="font-semibold text-white">{item.title}</h3>

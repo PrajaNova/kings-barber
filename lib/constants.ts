@@ -50,3 +50,67 @@ export const ABOUT_CONTENT = {
     },
   ],
 } as const;
+
+export const AWARDS_CONTENT = [
+  {
+    id: 1,
+    image: "/assets/images/award-1.png",
+    alt: "Best Barber Shop Award",
+    href: "https://simibest.sg", // Example link
+  },
+  {
+    id: 2,
+    image: "/assets/images/award-1.png", // Reusing for demo
+    alt: "Certified Barber Award",
+    href: "#",
+  },
+  {
+    id: 3,
+    image: "/assets/images/award-1.png",
+    alt: "Top Grooming Service",
+    href: "#",
+  },
+  {
+    id: 4,
+    image: "/assets/images/award-1.png",
+    alt: "Excellence in Styling",
+    href: "#",
+  },
+  {
+    id: 5,
+    image: "/assets/images/award-1.png",
+    alt: "Customer Choice Award",
+    href: "#",
+  },
+] as const;
+
+export const SERVICES_CONTENT = {
+  title: "Our Signature Services",
+  items: [
+    {
+      title: "Haircut & Styling",
+      description: "Consultation, wash, and styling with premium products.",
+      details:
+        "Experience a complete transformation with our signature haircut service. Includes a thorough consultation, invigorating wash, precision cut, and styling with our exclusive range of grooming products.",
+      image: "/assets/images/hero.jpg",
+    },
+    {
+      title: "Luxury Shaves",
+      description: "Straight razor shave with facial scrub & mask.",
+      details:
+        "Indulge in the ultimate relaxation. Our hot towel shave includes a pre-shave oil massage, hot towel treatment, straight razor shave, and a soothing post-shave mask to rejuvenate your skin.",
+      image: "/assets/images/hero.jpg",
+    },
+    {
+      title: "Scalp Treatment",
+      description: "Fauvert treatment for healthy scalp & hair growth.",
+      details:
+        "Revitalize your scalp with our specialized Fauvert treatment. Designed to combat dryness, dandruff, and hair loss, this treatment promotes healthy blood flow and stronger hair growth.",
+      image: "/assets/images/hero.jpg",
+    },
+  ],
+  cta: {
+    text: "View All Services",
+    href: "/services",
+  },
+} as const;
