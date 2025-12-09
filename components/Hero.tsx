@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
 
       {/* Content Container */}
-      <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 md:px-12 pt-20">
+      <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 md:px-12 pt-32">
         <div className="max-w-4xl space-y-6 animate-in fade-in slide-in-from-bottom-5 duration-1000">
           {/* Award Badge */}
           <div className="inline-flex w-fit items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md transition-transform hover:scale-105">
