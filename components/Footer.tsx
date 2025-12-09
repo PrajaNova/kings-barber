@@ -103,7 +103,9 @@ export default function Footer() {
           <p className="text-sm text-gray-500">
             Powered by &nbsp;
             <a
-              href="/"
+              href="https://www.prajanova.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-amber-500 hover:text-amber-400 transition-colors"
             >
               @PrajaNova
