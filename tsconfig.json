@@ -19,11 +19,13 @@
       }
     ],
     "paths": {
+      "##/*": ["./*"],
       "##/components/*": ["./components/*"],
+      "##/hooks/*": ["./hooks/*"],
       "##/lib/*": ["./lib/*"],
-      "##/app/*": ["./app/*"],
-      "##/utils/*": ["./utils/*"],
-      "##/public/*": ["./public/*"]
+      "##/services/*": ["./services/*"],
+      "##/data/*": ["./data/*"],
+      "##/types/*": ["./types/*"]
     }
   },
   "include": [

@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "kingsbarber.com.sg",
       },
+      {
+        protocol: "http",
+        hostname: "kingsbarber.com.sg",
+      },
     ],
   },
 };
