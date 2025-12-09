@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex h-full flex-col justify-center px-6 pt-20 md:px-12 lg:px-24">
+      <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 md:px-12 pt-20">
         <div className="max-w-4xl space-y-6 animate-in fade-in slide-in-from-bottom-5 duration-1000">
           {/* Award Badge */}
           <div className="inline-flex w-fit items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md transition-transform hover:scale-105">
@@ -39,12 +39,12 @@ export default function Hero() {
           </div>
 
           {/* Title */}
-          <h1 className="text-6xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
             {HERO_CONTENT.title}
           </h1>
 
           {/* Tagline */}
-          <p className="max-w-2xl text-lg leading-relaxed text-gray-300 md:text-md lg:text-xl">
+          <p className="max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl">
             {HERO_CONTENT.tagline}
           </p>
 

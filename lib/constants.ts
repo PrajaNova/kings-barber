@@ -1,6 +1,6 @@
 export const COMPANY_NAME = "Kings Barber";
-export const CONTACT_PHONE_NUMBER = "+441234567890";
-export const CONTACT_WHATSAPP_NUMBER = "+441234567890"; // Assuming same for now, or user can update
+export const CONTACT_PHONE_NUMBER = "+6587817032";
+export const CONTACT_WHATSAPP_NUMBER = "6587817032";
 
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -54,32 +54,51 @@ export const ABOUT_CONTENT = {
 export const AWARDS_CONTENT = [
   {
     id: 1,
-    image: "/assets/images/award-1.png",
-    alt: "Best Barber Shop Award",
-    href: "https://simibest.sg", // Example link
-  },
-  {
-    id: 2,
-    image: "/assets/images/award-1.png", // Reusing for demo
-    alt: "Certified Barber Award",
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/best-in-singapore.jpeg",
+    alt: "Best in Singapore",
     href: "#",
   },
   {
+    id: 2,
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/mediaone-top-in-singapore.jpeg",
+    alt: "Top Barbers In Singapore",
+    href: "https://mediaonemarketing.com.sg/top-barbers-singapore/",
+  },
+  {
     id: 3,
-    image: "/assets/images/award-1.png",
-    alt: "Top Grooming Service",
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/singapores-finest-services.jpeg",
+    alt: "Singapore's Finest Services",
     href: "#",
   },
   {
     id: 4,
-    image: "/assets/images/award-1.png",
-    alt: "Excellence in Styling",
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/best-in-singapore-1.jpeg",
+    alt: "Best in Singapore",
     href: "#",
   },
   {
     id: 5,
-    image: "/assets/images/award-1.png",
-    alt: "Customer Choice Award",
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/product-nations-choice.jpeg",
+    alt: "Product Nation's Choice",
+    href: "#",
+  },
+  {
+    id: 6,
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/voted-community-best.jpeg",
+    alt: "Voted Community Best",
+    href: "#",
+  },
+  {
+    id: 7,
+    image:
+      "http://kingsbarber.com.sg/wp-content/uploads/2022/06/rating-sg.jpeg",
+    alt: "Rating SG",
     href: "#",
   },
 ] as const;
@@ -177,3 +196,84 @@ export const PRODUCTS_CONTENT = {
     href: "/store",
   },
 } as const;
+
+export const FOOTER_CONTENT = {
+  map: {
+    embedUrl:
+      "https://maps.google.com/maps?q=12+Boon+Teck+Road,+Singapore+329586&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  },
+  contact: {
+    address: "12 Boon Teck Road, #01-01 Shaw Corner, Singapore 329586",
+    hours: "Daily 10am – 9pm",
+    phone: "+(65) 8781-7032",
+    email: "contact@kingsbarber.sg",
+  },
+} as const;
+
+export const TEAM_CONTENT = {
+  title: "Meet Our Team",
+  tagline: "The master barbers behind the chair.",
+  members: [
+    {
+      name: "John Doe",
+      role: "Senior Barber",
+      image: "/assets/images/hero.jpg", // Placeholder
+      socials: {
+        instagram: "#",
+        facebook: "#",
+      },
+    },
+    {
+      name: "Jane Smith",
+      role: "Stylist",
+      image: "/assets/images/hero.jpg", // Placeholder
+      socials: {
+        instagram: "#",
+        facebook: "#",
+      },
+    },
+    {
+      name: "Mike Johnson",
+      role: "Master Barber",
+      image: "/assets/images/hero.jpg", // Placeholder
+      socials: {
+        instagram: "#",
+        facebook: "#",
+      },
+    },
+    {
+      name: "Sarah Lee",
+      role: "Colorist",
+      image: "/assets/images/hero.jpg", // Placeholder
+      socials: {
+        instagram: "#",
+        facebook: "#",
+      },
+    },
+  ],
+  cta: {
+    text: "View All Team",
+    href: "/about-us#teams",
+  },
+} as const;
+
+export const FEATURED_ARTICLES = [
+  {
+    id: 1,
+    image: "/assets/images/award-1.png", // Placeholder - Update with actual MediaOne logo
+    alt: "Top Barbers Singapore - MediaOne",
+    href: "https://mediaonemarketing.com.sg/top-barbers-singapore",
+  },
+  {
+    id: 2,
+    image: "/assets/images/award-1.png", // Placeholder - Update with actual Finest Services logo
+    alt: "Finest Barbershops in Singapore",
+    href: "https://finestservices.com.sg/barbershops/",
+  },
+  {
+    id: 3,
+    image: "/assets/images/award-1.png", // Placeholder - Update with actual Best in Singapore logo
+    alt: "Best Barbers in Singapore",
+    href: "https://www.bestinsingapore.co/best-barbers-singapore/",
+  },
+] as const;
