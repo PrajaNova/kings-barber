@@ -219,6 +219,10 @@ export const TEAM_CONTENT = {
     {
       name: "John Doe",
       role: "Senior Barber",
+      experience: "8 Years Exp",
+      description:
+        "Specializes in classic cuts and hot towel shaves. Known for his attention to detail and friendly demeanor.",
+      customersServed: "5,000+",
       image: "/assets/images/hero.jpg", // Placeholder
       socials: {
         instagram: "#",
@@ -228,6 +232,10 @@ export const TEAM_CONTENT = {
     {
       name: "Jane Smith",
       role: "Stylist",
+      experience: "5 Years Exp",
+      description:
+        "Expert in modern texturing and creative coloring. She brings a fresh perspective to traditional grooming.",
+      customersServed: "3,500+",
       image: "/assets/images/hero.jpg", // Placeholder
       socials: {
         instagram: "#",
@@ -237,6 +245,10 @@ export const TEAM_CONTENT = {
     {
       name: "Mike Johnson",
       role: "Master Barber",
+      experience: "12 Years Exp",
+      description:
+        "A master of his craft with over a decade of experience. He mentors the junior barbers and sets the standard for quality.",
+      customersServed: "10,000+",
       image: "/assets/images/hero.jpg", // Placeholder
       socials: {
         instagram: "#",
@@ -246,6 +258,10 @@ export const TEAM_CONTENT = {
     {
       name: "Sarah Lee",
       role: "Colorist",
+      experience: "6 Years Exp",
+      description:
+        "Passionate about color theory and hair health. She ensures every color treatment is vibrant and long-lasting.",
+      customersServed: "4,000+",
       image: "/assets/images/hero.jpg", // Placeholder
       socials: {
         instagram: "#",
@@ -279,3 +295,85 @@ export const FEATURED_ARTICLES = [
     href: "https://www.bestinsingapore.co/best-barbers-singapore/",
   },
 ] as const;
+
+export const ABOUT_PAGE_CONTENT = {
+  hero: {
+    title: "Redefining Men’s Grooming Since 2015",
+    subline: "Trained in England, perfected in Singapore.",
+    cta: {
+      text: "Book Your Experience",
+      href: "/book",
+    },
+    image: "/assets/images/hero.jpg",
+  },
+  story: {
+    title: "Our Story",
+    established: "Established 2015",
+    description: [
+      "Kings Barber started with a simple vision: to bring the authentic, time-honored traditions of British barbering to Singapore.",
+      "Our journey began in London, where our founders trained at the prestigious Sid Sottung Academy. Armed with classic techniques and a passion for craftsmanship, we set out to create a space where men could experience more than just a haircut.",
+      "Today, we are proud to be a staple in the community, offering a blend of old-school hospitality and modern styling precision.",
+    ],
+    image: "/assets/images/hero.jpg", // Placeholder
+  },
+  philosophy: {
+    title: "Our Motivation & Philosophy",
+    description:
+      "We believe that grooming is an art form. Every cut, shave, and style is executed with precision, care, and a dedication to excellence.",
+    values: [
+      {
+        title: "Craftsmanship",
+        description: "Mastery of classic and modern techniques.",
+        icon: "scissors",
+      },
+      {
+        title: "Premium Products",
+        description: "Only the best for your hair and skin.",
+        icon: "spray",
+      },
+      {
+        title: "Hygiene First",
+        description: "Sterile tools and a clean environment.",
+        icon: "shield",
+      },
+      {
+        title: "Customer Satisfaction",
+        description: "Your confidence is our measure of success.",
+        icon: "star",
+      },
+    ],
+  },
+  testimonials: [
+    {
+      id: 1,
+      name: "James Tan",
+      quote:
+        "The best barber experience I've had in Singapore. The hot towel shave is a must-try!",
+    },
+    {
+      id: 2,
+      name: "David Lee",
+      quote:
+        "Great atmosphere and professional service. My fade has never looked better.",
+    },
+    {
+      id: 3,
+      name: "Michael Chen",
+      quote:
+        "Authentic British barbering skills. Highly recommended for anyone looking for a sharp cut.",
+    },
+  ],
+  instagram: {
+    title: "Follow Us @KingsBarberSG",
+    handle: "@KingsBarberSG",
+    link: "https://instagram.com/kingsbarbersg",
+    images: [
+      "/assets/images/hero.jpg",
+      "/assets/images/hero.jpg",
+      "/assets/images/hero.jpg",
+      "/assets/images/hero.jpg",
+      "/assets/images/hero.jpg",
+      "/assets/images/hero.jpg",
+    ],
+  },
+} as const;
