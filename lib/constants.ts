@@ -1,12 +1,14 @@
 export const COMPANY_NAME = "Kings Barber";
+export const COMPANY_LOGO_URL =
+  "https://kingsbarber.com.sg/wp-content/uploads/2016/08/LOGO.png";
 export const CONTACT_PHONE_NUMBER = "+6587817032";
 export const CONTACT_WHATSAPP_NUMBER = "6587817032";
 
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "About Us", href: "/about" },
+  { label: "Products", href: "/store" },
+  { label: "About Us", href: "/about-us" },
 ] as const;
 
 export const HERO_CONTENT = {

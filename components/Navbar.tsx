@@ -1,9 +1,12 @@
 "use client";
 
 import { Menu, Phone, User, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
+  COMPANY_LOGO_URL,
   COMPANY_NAME,
   CONTACT_PHONE_NUMBER,
   NAV_ITEMS,
@@ -17,10 +20,18 @@ export interface NavLinkProps {
 }
 
 function NavLink({ href, children, onClick }: NavLinkProps) {
+  const pathname = usePathname();
+  const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
     <Link
       href={href}
-      className="rounded-full px-8 py-3 text-base font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white w-full text-center lg:w-auto lg:px-5 lg:py-2 lg:text-sm"
+      className={cn(
+        "rounded-full px-8 py-3 text-base font-medium transition-colors w-full text-center lg:w-auto lg:px-5 lg:py-2 lg:text-sm",
+        isActive
+          ? "bg-amber-500/20 text-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.2)] backdrop-blur-md"
+          : "text-white/80 hover:bg-white/10 hover:text-white",
+      )}
       onClick={onClick}
     >
       {children}
@@ -36,10 +47,17 @@ export default function Navbar() {
       {/* Logo */}
       <Link
         href="/"
-        className="text-2xl font-bold tracking-tight text-white lg:text-3xl z-50"
+        className="relative z-50 flex items-center"
         onClick={() => setIsOpen(false)}
       >
-        {COMPANY_NAME}
+        <Image
+          src={COMPANY_LOGO_URL}
+          alt={COMPANY_NAME}
+          width={350}
+          height={120}
+          className="h-10 w-auto object-contain"
+          priority
+        />
       </Link>
 
       {/* Desktop Nav Links - Glass Effect */}
